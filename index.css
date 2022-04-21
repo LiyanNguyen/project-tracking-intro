@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+:root {
+	/* Primary Colors */
+	--red: hsl(0, 100%, 68%);
+	--redHover: hsl(0, 100%, 78%);
+
+	/* Neutral Colors */
+	--veryDarkBlue: hsl(230, 29%, 20%);
+	--darkGrayishBlue: hsl(230, 11%, 40%);
+	--grayishBlue: hsl(231, 7%, 65%);
+	--lightGrayishBlue: hsl(207, 33%, 95%);
+
+	/* Body Copy */
+	font-size: 18px;
+
+	/* Headings, Call-to-actions, Navigation */
+	font-family: 'Barlow Condensed', sans-serif;
+
+	/* Body */
+	/* font-family: 'Barlow', sans-serif; */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+}
+
+main {
+	position: absolute;
+	min-height: 100vh;
+	min-width: 100vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2fr 8fr;
+	grid-template-areas: 
+	"navigation navigation"
+	"textContent imgContainer";
+}
+
+nav {
+	grid-area: navigation;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-inline: 10vw;
+}
+
+#mobileMenu {
+	display: none;
+}
+
+nav ul {
+	width: 30vw;
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	color: var(--veryDarkBlue);
+}
+
+.mobileMenuList {
+	display: none;
+}
+
+ul li:nth-last-child(1),
+ul li:nth-last-child(2) {
+	color: var(--grayishBlue);
+}
+
+ul li {
+	cursor: pointer;
+}
+
+ul li:hover {
+	text-decoration: underline;
+}
+
+ul li:nth-child(4) {
+	cursor: auto;
+}
+
+ul li:nth-child(4):hover {
+	text-decoration: none;
+}
+
+.textContent {
+	grid-area: textContent;
+	display: flex;
+	flex-direction: column;
+	padding-top: 10vh;
+	padding-left: 10vw;
+	gap: 1rem;
+}
+
+.textContent strong {
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: var(--grayishBlue);
+}
+
+.textContent strong span {
+	letter-spacing: 0;
+	background-color: var(--veryDarkBlue);
+	color: white;
+	padding: .1rem .7rem;
+	border-radius: 1rem;
+}
+
+.textContent h1 {
+	font-size: 3.5rem;
+	color: var(--veryDarkBlue);
+	text-transform: uppercase;
+}
+
+.textContent p {
+	color: var(--darkGrayishBlue);
+	font-family: 'Barlow', sans-serif;
+}
+
+.bottomRow {
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+	gap: 1rem;
+}
+
+.bottomRow button {
+	background-color: var(--red);
+	border: none;
+	padding: .8rem;
+	color: white;
+	border-radius: .5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: 'Barlow', sans-serif;
+	cursor: pointer;
+}
+
+.bottomRow button:hover {
+	background-color: var(--redHover);
+}
+
+.bottomRow p {
+	color: var(--grayishBlue);
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+
+.imgContainer {
+	background-image: url(images/illustration-devices.svg);
+	background-repeat: no-repeat;
+	background-size: 138%;
+	grid-area: imgContainer;
+}
+
+.grayLayer {
+	position: absolute;
+	background-color: var(--lightGrayishBlue);
+	min-height: 50vh;
+	min-width: 50vw;
+	right: 0;
+	border-bottom-left-radius: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+
+	.grayLayer {
+		min-height: 55vh;
+	}
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: .3fr 1fr 1fr;
+		grid-template-areas: 
+		"navigation"
+		"imgContainer"
+		"textContent";
+	}
+
+	nav {
+		padding-inline: 6.5vw;
+		position: relative;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	.mobileMenuList {
+		position: absolute;
+		top: 12vh;
+		background-color: white;
+		min-width: 87vw;
+		min-height: 30vh;
+		display: none; /* manipulate this value via JS */
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.1);
+	}
+
+	.mobileMenuList hr {
+		width: 80%;
+		color: var(--grayishBlue);
+	}
+
+	#mobileMenu {
+		display: block;
+	}
+
+	.textContent {
+		padding: 3vh 6.5vw;
+	}
+
+	.textContent h1 {
+		font-size: 2rem;
+	}
+
+	.bottomRow {
+		margin-top: 1rem;
+	}
+
+	.bottomRow p {
+		letter-spacing: .1rem;
+	}
+}
