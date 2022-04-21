@@ -5,6 +5,9 @@ A Modern Project Tracking Webpage with mobile hamburger menu
 This is a solution to the [Project tracking intro component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e).
 
 ### Screenshot
+![method-9](https://user-images.githubusercontent.com/50958126/164406642-8a5c10f2-124a-470a-819b-6b78d7de4198.png)
+![method-10](https://user-images.githubusercontent.com/50958126/164406657-df97f998-1c15-4861-b7f3-7aebd5d6f37a.png)
+![method-11](https://user-images.githubusercontent.com/50958126/164406673-10cd3eb4-c386-4401-ad1a-f4ae13a056eb.png)
 
 ### Links
 - Solution URL: https://github.com/LiyanNguyen/project-tracking-intro
