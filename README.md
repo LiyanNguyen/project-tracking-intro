@@ -7,8 +7,8 @@ This is a solution to the [Project tracking intro component challenge on Fronten
 ### Screenshot
 
 ### Links
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://github.com/LiyanNguyen/project-tracking-intro
+- Live Site URL: https://liyannguyen.github.io/project-tracking-intro
 
 ### My Process
 - Design the Desktop Viewport first, then the Mobile viewport
